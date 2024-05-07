@@ -1,0 +1,71 @@
+{
+    "productos": [
+      {
+        "img": "Imagen11.jpeg",
+        "nombre": "Nendoroids",
+        "precio": "$50"
+      },
+      {
+        "img": "Imagen10.jpeg",
+        "nombre": "Figura Xie Lian",
+        "precio": "$75"
+      },
+      {
+        "img": "Imagen7.jpg",
+        "nombre": "Doll San Lang",
+        "precio": "$100"
+      },
+      {
+        "img": "Imagen8.jpeg",
+        "nombre": "Doll Xie Lian",
+        "precio": "$100"
+      },
+      {
+        "img": "Imagen9.jpeg",
+        "nombre": "Doll Hua Cheng",
+        "precio": "$100"
+      },
+      {
+        "img": "producto1.jpg",
+        "nombre": "Nenrodois San Lang y Xie Lian",
+        "precio": "$100"
+      }
+    ],
+  
+  
+    "characters":[
+       {
+          "name":"Hua Cheng",
+          "chineseName":"花城",
+          "alias":"San Lang",
+          "description":"Hua Cheng, also referred to as San Lang, is the deuteragonist and main love interest in Heaven Official’s Blessing. He's a ghost of Supreme rank and the most notorious of the Four Great Calamities, widely known as Crimson Rain Sought Flower.",
+          "image":"Imagen15.jpeg",
+          "appearance":{
+             "description":"As a Supreme, Hua Cheng possesses an extremely powerful shape-shifting ability not even gods can see through. In his true form, he is a handsome youth of eighteen to nineteen years with skin as white as snow and wearing maple-red clothes.",
+             "image":"Imagen15.jpeg"
+          }
+       },
+       {
+          "name":"Xie Lian",
+          "chineseName":"谢怜",
+          "description":"Xie Lian, His Royal Highness the Crown Prince of Xianle, is the protagonist of Heaven Official’s Blessing. After multiple unfortunate events, he was twice banished from the Heavens. 800 years later, he ascended for the third time.",
+          "image":"Imagen14.jpeg",
+          "appearance":{
+             "description":"In terms of appearance, Xie Lian was considered the peerless beauty of Xianle. His body is described as 'smooth and fair like jade.' He currently wears a conical bamboo hat and is dressed in simple, white Taoist robes.",
+             "image":"Imagen14.jpeg"
+          }
+       },
+       {
+          "name":"Jun Wu",
+          "chineseName":"君吾",
+          "description":"Jun Wu is the Heavenly Emperor who presides over the Heavenly realm, as well as the oldest and most powerful Martial God. He resides in the Great Martial Hall, the number one martial palace in Heaven.",
+          "image":"https://static.myfigurecollection.net/upload/entries/1/328191-4d25b.jpg",
+          "appearance":{
+             "description":"Jun Wu is a poised, solemn youth with an air of dignity. He is usually seen clad in pure white armors, and sits on a throne with the Great Martial Hall behind him and the snowy peak of a mountain under his feet.",
+             "image":"https://static.myfigurecollection.net/upload/entries/1/328191-4d25b.jpg"
+          }
+       }
+    ]
+ 
+  }
+ 

@@ -1,0 +1,132 @@
+body {
+  font-family: "Inder", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: linear-gradient(to bottom, #470000, #000000);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.Contenedor {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  height: 100vh;
+  width: cover;
+ 
+  
+}
+
+.Item {
+
+  width: 300px;
+  height: 450px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 15px;
+
+}
+
+.Socialmedia_1{
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-left: 95px;
+
+}
+
+.Socialmedia_2{
+
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-left: 135px;
+  margin-top: -30px;
+}
+
+.Socialmedia_3{
+  
+  display: flex;
+  width: 30px;
+  height: 30px;
+  margin-left: 175px;
+  margin-top: -30px;
+}
+
+
+.Form {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  padding: 2px;
+  margin-top: 30px;
+
+
+}
+
+.Campo1 {
+
+  width: 60%;
+  height:1px;
+  border-radius: 30px;
+  margin: 10px ; 
+ 
+  border: 2px solid #55535341;
+ background-color: rgb(255, 255, 255);
+ color: #55535341;
+  position: relative;
+  
+
+  padding: 20px;
+  
+}
+
+.Campo2 {
+
+ 
+  width: 60%;
+  height:1px;
+  border-radius: 30px;
+  margin: 10px ; 
+ 
+  border: 2px solid #55535341; 
+ background-color: rgb(255, 255, 255);
+ color: #55535341;
+  
+
+  padding: 20px;
+  
+}
+
+.Login {
+
+ 
+  margin: 25px;
+  border-radius: 10px;
+  border: none;
+  height: 35px;
+  width: 70px;
+  background-color:rgb(73, 17, 6);
+  color: white;
+  font-size: 16px;
+
+}
+.signin_button {
+
+  display: flex;
+  border: none;
+  background: none;
+  margin-left: 125px;
+ 
+}
+
