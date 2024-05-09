@@ -280,7 +280,7 @@ button:hover {
 
 .carrousel .img {
   width: calc(100% / 5 - 2em);
-  min-height: 30rem;
+  min-height: 40rem;
   padding: 1rem;
   transition: all 0.4s ease;
   border-radius: 1em;

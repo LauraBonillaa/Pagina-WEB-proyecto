@@ -1,40 +1,43 @@
-const searchParams = new URLSearchParams(window.location.search);
-const NamePersonaje = searchParams.get("name")
+window.addEventListener('load', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const nombre = decodeURIComponent(urlParams.get('nombre'));
 
-console.log(NamePersonaje)
-let personajeEncontrado= ""
-
-async function traerPersonajes(){
-  fetch('./data.json')
+  fetch('data.json')
     .then(response => response.json())
-    .then(charactersJSON => {
-      const contenedorProductos = document.getElementById("container");
-      contenedorProductos.classList.add("container");
+    .then(data => {
+      const characterData = data.characters.find(character => character.name === nombre);
+      if (characterData) {
+        const container = document.getElementById('container');
 
-      charactersJSON.characters.forEach((personaje) => {
-        if (personaje.name === NamePersonaje) {
-          console.log(personaje)
-          personajeEncontrado = personaje
-          console.log(personajeEncontrado)
-          const carta = `
-            <div class="card">
-              <h3>${personaje.name}</h3>
-              <p>${personaje.appearance}</p>
-            </div>
-          `;
-          const foto = `<img src="${personaje.appearance.image}" >`;
-          contenedorProductos.innerHTML += foto;
-          contenedorProductos.innerHTML += carta;
-        }
-      });
+        const imgElement = document.createElement("img");
+        imgElement.src = characterData.appearance.image; 
+        imgElement.className = "character-image"; 
+
+        const h3 = document.createElement("h3");
+        h3.textContent = characterData.name;
+        h3.className = "character-name";
+
+        const p = document.createElement("p");
+        p.textContent = characterData.chineseName;
+        p.className = "character-chinese-name";  
+
+
+        const p2 = document.createElement("p");
+        p2.textContent = characterData.alias; 
+        p2.className = "character-alias";
+
+        const p3 = document.createElement("p");
+        p3.textContent = characterData.appearance.descriptionAppearance;
+        p3.className = "character-description";
+
+        container.appendChild(imgElement);
+        container.appendChild(h3);
+        container.appendChild(p);
+        container.appendChild(p2);
+        container.appendChild(p3);
+      }
     })
     .catch(error => {
       console.error('Error al cargar el archivo JSON', error);
     });
-}
-
-traerPersonajes();
-
-console.log (traerPersonajes)
-
-console.log (carta)
+});
