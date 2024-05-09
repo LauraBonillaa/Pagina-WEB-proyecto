@@ -139,3 +139,23 @@ body {
     width: 10%;
     height: fit-content;
 }
+
+.product-image {
+  width: 15%;  /* Ajusta el tamaño de la imagen */
+  float: left;  /* Alinea la imagen a la izquierda */
+  margin-right: 20px;  /* Agrega un margen a la derecha de la imagen */
+  margin-bottom: 50px;  /* Agrega un margen en la parte inferior de la imagen */
+}
+
+.product-name,
+
+.product-price,
+.product-description {
+  text-align: left;
+}
+
+.container{
+  width: 85%;
+  height: 500px;
+  padding: 7rem;
+}

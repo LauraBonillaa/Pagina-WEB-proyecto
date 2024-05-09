@@ -27,11 +27,12 @@ punto.forEach( ( cadaPunto , i )=> {
 
 
 class Producto {
-    constructor(id, img, nombre, precio) {
+    constructor(id, img, nombre, precio, description) {
       this.id = id;
       this.img = img;
       this.nombre = nombre;
       this.precio = precio;
+      this.description = description;
     }
   
     render() {

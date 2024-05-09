@@ -1,44 +1,59 @@
 {
   "productos": [
     {
-      "img": "Imagen11.jpeg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen11.jpeg?raw=true",
       "nombre": "Nendoroids",
-      "precio": "$50"
+      "precio": "$50",
+      "description":"Nendoroids are a line of collectible figures produced by the Japanese company Good Smile Company. These figures are known for their chibi (small and cute) design, featuring a large head and a small body with articulated joints that allow for different poses. Nendoroids often depict characters from anime, manga, and video games, and they are highly sought after by collectors for their high quality and attention to detail. Each Nendoroid figure comes with interchangeable face plates and accessories, allowing collectors to customize and display their figures in unique ways."
     },
     {
-      "img": "Imagen10.jpeg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen10.jpeg?raw=true",
       "nombre": "Figura Xie Lian",
-      "precio": "$75"
+      "precio": "$75",
+      "description":"The Xie Lian Nendoroid figure is a captivating addition to any collection, embodying the ethereal charm of the beloved character from the hit series Heaven Official's Blessing. Created by Good Smile Company, this meticulously crafted figure captures Xie Lian's essence with remarkable detail and artistry. Standing at approximately 10 centimeters tall, this Nendoroid features a chibi-style design that adds a playful and adorable touch to Xie Lian's character. The figure is intricately sculpted to showcase his flowing robes, intricate accessories, and serene expression, staying true to his appearance in the series. What sets this Xie Lian Nendoroid apart is its remarkable poseability. With multiple points of articulation, including movable arms, legs, and head, you can recreate your favorite scenes from Heaven Official's Blessing or create new adventures for Xie Lian to embark on. Additionally, the figure comes with a variety of interchangeable parts, including different facial expressions, hand gestures, and accessories, allowing you to customize Xie Lian's look and pose him in unique ways."
+    
     },
     {
-      "img": "Imagen7.jpg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen7.jpg?raw=true",
       "nombre": "Doll San Lang",
-      "precio": "$100"
+      "precio": "$100",
+      "description":"Doll San Lang is a beautifully crafted doll inspired by the character Hua Cheng from the popular series Heaven Official's Blessing. This exquisite doll captures the essence of San Lang with stunning attention to detail, from his intricate clothing to his distinctive facial features. Standing at approximately [insert height], this doll is expertly designed to resemble San Lang's appearance in the series, complete with his signature outfit and accessories. The doll's poseability allows for a variety of display options, making it a versatile addition to any collection."
+    
     },
     {
-      "img": "Imagen8.jpeg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen8.jpeg?raw=true",
       "nombre": "Doll Xie Lian",
-      "precio": "$100"
+      "precio": "$100",
+      "description":"Doll Xie Lian is a meticulously crafted doll inspired by the character Xie Lian from the enchanting series Heaven Official's Blessing. This exquisite doll embodies the essence of Xie Lian with intricate details and a captivating design. Standing at approximately [insert height], this doll faithfully recreates Xie Lian's appearance, capturing his elegant robes, delicate features, and serene expression. Every detail, from the embroidery on his clothing to the styling of his hair, is carefully crafted to reflect his character from the series. The doll is designed with poseability in mind, allowing you to recreate your favorite scenes from Heaven Official's Blessing or create new adventures for Xie Lian. Additionally, the doll comes with a variety of accessories and interchangeable parts, such as different facial expressions and hand gestures, allowing you to customize Xie Lian's look and create unique displays."
+    
     },
     {
-      "img": "Imagen9.jpeg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen9.jpeg?raw=true",
       "nombre": "Doll Hua Cheng",
-      "precio": "$100"
+      "precio": "$100",
+      "description":"Doll Hua Cheng is a stunningly detailed doll inspired by the character Hua Cheng from the captivating series Heaven Official's Blessing. This exquisite doll captures the essence of Hua Cheng with remarkable accuracy and craftsmanship, making it a must-have for fans of the series and collectors alike. Standing at approximately [insert height], this doll is expertly designed to replicate Hua Cheng's appearance, featuring his intricate clothing, striking accessories, and distinctive features. Every aspect of the doll, from its poseability to its facial expression, is carefully crafted to bring Hua Cheng to life in stunning detail. The doll's poseability allows for a wide range of display options, allowing you to recreate your favorite scenes from Heaven Official's Blessing or create new adventures for Hua Cheng. Additionally, the doll comes with a variety of accessories and interchangeable parts, such as different facial expressions and hand gestures, allowing you to customize Hua Cheng's look and create unique displays."
+    
     },
     {
-      "img": "producto1.jpg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/producto1.jpg?raw=true",
       "nombre": "Nenrodois San Lang y Xie Lian",
-      "precio": "$100"
+      "precio": "$100",
+      "description":"Nendoroid San Lang and Xie Lian are adorable collectible figures inspired by the characters from the captivating series Heaven Official's Blessing. These Nendoroids capture the essence of San Lang and Xie Lian with their chibi-style designs and intricate details, making them a delightful addition to any collection. The San Lang Nendoroid features his signature outfit and accessories, while the Xie Lian Nendoroid comes with his elegant robes and accessories. Both figures are poseable, allowing you to recreate your favorite scenes from the series or create new adventures for San Lang and Xie Lian. Each Nendoroid comes with a variety of interchangeable parts, including different facial expressions and hand gestures, allowing you to customize their looks and create unique displays. Whether you're a fan of Heaven Official's Blessing looking to expand your collection or a collector of Nendoroid figures seeking a standout set, Nendoroid San Lang and Xie Lian are sure to delight with their charm and quality craftsmanship."
+    
     },
     {
-      "img": "producto2.jpg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/producto2.jpg?raw=true",
       "nombre": "Producto2",
-      "precio": "$10"
+      "precio": "$10",
+      "description":"Nendoroids are a line of collectible figures produced by the Japanese company Good Smile Company. These figures are known for their chibi (small and cute) design, featuring a large head and a small body with articulated joints that allow for different poses. Nendoroids often depict characters from anime, manga, and video games, and they are highly sought after by collectors for their high quality and attention to detail. Each Nendoroid figure comes with interchangeable face plates and accessories, allowing collectors to customize and display their figures in unique ways."
+    
     },
     {
-      "img": "producto3.jpg",
+      "img": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/producto3.jpg?raw=true",
       "nombre": "Producto3",
-      "precio": "$90"
+      "precio": "$90",
+      "description":"Nendoroids are a line of collectible figures produced by the Japanese company Good Smile Company. These figures are known for their chibi (small and cute) design, featuring a large head and a small body with articulated joints that allow for different poses. Nendoroids often depict characters from anime, manga, and video games, and they are highly sought after by collectors for their high quality and attention to detail. Each Nendoroid figure comes with interchangeable face plates and accessories, allowing collectors to customize and display their figures in unique ways."
+    
     }
   ],
   "characters": [
@@ -47,50 +62,50 @@
       "chineseName": "花城",
       "alias": "San Lang",
       "description": "Hua Cheng, also referred to as San Lang, is the deuteragonist and main love interest in Heaven Official’s Blessing. He's a ghost of Supreme rank and the most notorious of the Four Great Calamities, widely known as Crimson Rain Sought Flower.",
-      "image": "Imagen15.jpeg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen15.jpeg?raw=true",
       "appearance": {
         "description": "As a Supreme, Hua Cheng possesses an extremely powerful shape-shifting ability not even gods can see through. In his true form, he is a handsome youth of eighteen to nineteen years with skin as white as snow and wearing maple-red clothes.",
-        "image": "Imagen15.jpeg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen15.jpeg?raw=true"
       }
     },
     {
       "name": "Xie Lian",
       "chineseName": "谢怜",
       "description": "Xie Lian, His Royal Highness the Crown Prince of Xianle, is the protagonist of Heaven Official’s Blessing. After multiple unfortunate events, he was twice banished from the Heavens. 800 years later, he ascended for the third time.",
-      "image": "Imagen14.jpeg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen14.jpeg?raw=true",
       "appearance": {
         "description": "In terms of appearance, Xie Lian was considered the peerless beauty of Xianle. His body is described as 'smooth and fair like jade.' He currently wears a conical bamboo hat and is dressed in simple, white Taoist robes.",
-        "image": "Imagen14.jpeg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Imagen14.jpeg?raw=true"
       }
     },
     {
       "name": "Jun Wu",
       "chineseName": "君吾",
       "description": "Jun Wu is the Heavenly Emperor who presides over the Heavenly realm, as well as the oldest and most powerful Martial God. He resides in the Great Martial Hall, the number one martial palace in Heaven.",
-      "image": "Personaje3.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje3.jpg?raw=true",
       "appearance": {
         "description": "Jun Wu is a poised, solemn youth with an air of dignity. He is usually seen clad in pure white armors, and sits on a throne with the Great Martial Hall behind him and the snowy peak of a mountain under his feet.",
-        "image": "Personaje3.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje3.jpg?raw=true"
       }
     },
     {
       "name": "Feng Xin",
       "chineseName": "风신",
       "description": "Feng Xin is a martial god and a member of the Four Great Marshals. He is known for his loyalty and his unwavering dedication to his duties.",
-      "image": "Personaje4.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje4.jpg?raw=true",
       "appearance": {
         "description": "Feng Xin has a strong and imposing appearance, with broad shoulders and a muscular build. He often wears armor and carries a sword, reflecting his martial prowess.",
-        "image": "Personaje4.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje4.jpg?raw=true"
       }
     },
     {
       "name": "Mu Qing",
       "chineseName": "木青",
       "description": "Mu Qing is a martial god and one of the Four Great Marshals. He is known for his fierce loyalty to Xie Lian and his hot-tempered personality.",
-      "image": "Personaje5.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje5.jpg?raw=true",
       "appearance": {
         "description": "Mu Qing has a rugged and wild appearance, with long unkempt hair and sharp features. He often wears simple martial arts robes and carries a sword, reflecting his martial prowess.",
-        "image": "Personaje5.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje5.jpg?raw=true"
       }
     },
     
@@ -98,40 +113,40 @@
       "name": "He Xuan",
       "chineseName": "贺铄",
       "description": "He Xuan is the Prince of the Heavenly Kingdom and the heir to the throne. He is a powerful martial god and a skilled swordsman.",
-      "image": "Personaje6.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje6.jpg?raw=true",
       "appearance": {
         "description": "He Xuan has a regal and handsome appearance, with long black hair and piercing eyes. He often wears elaborate robes and carries a sword, reflecting his status and martial prowess.",
-        "image": "Personaje6.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje6.jpg?raw=true"
     }
     },
     {
       "name": "Quan Yizhen",
       "chineseName": "全忆真",
       "description": "Quan Yizhen is the Queen of the Heavenly Kingdom and the wife of the Heavenly Emperor, Jun Wu. She is a powerful and respected figure in the celestial realm.",
-      "image": "Personaje7.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje7.jpg?raw=true",
       "appearance": {
         "description": "Quan Yizhen has a regal and elegant appearance, with long flowing hair and a graceful demeanor. She often wears intricate robes befitting her status as the Queen of Heaven.",
-        "image": "Personaje7.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje7.jpg?raw=true"
       }
     },
     {
       "name": "Ling Wen",
       "chineseName": "灵温",
       "description": "Ling Wen is a powerful martial god and one of the Four Great Marshals. He is known for his calm and composed nature, as well as his strategic mind.",
-      "image": "Personaje8.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje8.jpg?raw=true",
       "appearance": {
         "description": "Ling Wen has a serene and scholarly appearance, with neatly tied hair and a calm expression. He often wears simple martial arts robes and carries a sword, reflecting his martial prowess.",
-        "image": "Personaje8.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje8.jpg?raw=true"
       }
     },
     {
       "name": "Nan Feng",
       "chineseName": "南风",
       "description": "Nan Feng is a powerful martial god and one of the Four Great Marshals. He is known for his fierce loyalty and his uncompromising nature.",
-      "image": "Personaje9.jpg",
+      "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje9.jpg?raw=true",
       "appearance": {
         "description": "Nan Feng has a stern and imposing appearance, with sharp features and a muscular build. He often wears armor and carries a sword, reflecting his martial prowess.",
-        "image": "Personaje9.jpg"
+        "image": "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Personaje9.jpg?raw=true"
       }
     }
   ]

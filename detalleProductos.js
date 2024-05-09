@@ -32,6 +32,11 @@ window.addEventListener('load', function() {
           p.textContent = productoData.precio;
           p.className = "product-price";
           container.appendChild(p);
+
+          const p1 = document.createElement("p1");
+          p.textContent = productoData.description;
+          p.className = "product-price";
+          container.appendChild(p1);
         }
       })
       .catch(error => {
