@@ -157,5 +157,6 @@ body {
 .container{
   width: 85%;
   height: 500px;
-  padding: 7rem;
+  margin-left: auto; /* Margen izquierdo automático */
+  margin-right: auto; /* Margen derecho automático */
 }
