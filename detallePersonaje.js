@@ -2,7 +2,7 @@ window.addEventListener('load', function() {
   const urlParams = new URLSearchParams(window.location.search);
   const nombre = decodeURIComponent(urlParams.get('nombre'));
 
-  fetch('data.json')
+  fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
     .then(response => response.json())
     .then(data => {
       const characterData = data.characters.find(character => character.name === nombre);
