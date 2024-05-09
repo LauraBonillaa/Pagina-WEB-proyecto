@@ -1,71 +1,138 @@
 {
-    "productos": [
-      {
-        "img": "Imagen11.jpeg",
-        "nombre": "Nendoroids",
-        "precio": "$50"
-      },
-      {
-        "img": "Imagen10.jpeg",
-        "nombre": "Figura Xie Lian",
-        "precio": "$75"
-      },
-      {
-        "img": "Imagen7.jpg",
-        "nombre": "Doll San Lang",
-        "precio": "$100"
-      },
-      {
-        "img": "Imagen8.jpeg",
-        "nombre": "Doll Xie Lian",
-        "precio": "$100"
-      },
-      {
-        "img": "Imagen9.jpeg",
-        "nombre": "Doll Hua Cheng",
-        "precio": "$100"
-      },
-      {
-        "img": "producto1.jpg",
-        "nombre": "Nenrodois San Lang y Xie Lian",
-        "precio": "$100"
+  "productos": [
+    {
+      "img": "Imagen11.jpeg",
+      "nombre": "Nendoroids",
+      "precio": "$50"
+    },
+    {
+      "img": "Imagen10.jpeg",
+      "nombre": "Figura Xie Lian",
+      "precio": "$75"
+    },
+    {
+      "img": "Imagen7.jpg",
+      "nombre": "Doll San Lang",
+      "precio": "$100"
+    },
+    {
+      "img": "Imagen8.jpeg",
+      "nombre": "Doll Xie Lian",
+      "precio": "$100"
+    },
+    {
+      "img": "Imagen9.jpeg",
+      "nombre": "Doll Hua Cheng",
+      "precio": "$100"
+    },
+    {
+      "img": "producto1.jpg",
+      "nombre": "Nenrodois San Lang y Xie Lian",
+      "precio": "$100"
+    },
+    {
+      "img": "producto2.jpg",
+      "nombre": "Producto2",
+      "precio": "$10"
+    },
+    {
+      "img": "producto3.jpg",
+      "nombre": "Producto3",
+      "precio": "$90"
+    }
+  ],
+  "characters": [
+    {
+      "name": "Hua Cheng",
+      "chineseName": "花城",
+      "alias": "San Lang",
+      "description": "Hua Cheng, also referred to as San Lang, is the deuteragonist and main love interest in Heaven Official’s Blessing. He's a ghost of Supreme rank and the most notorious of the Four Great Calamities, widely known as Crimson Rain Sought Flower.",
+      "image": "Imagen15.jpeg",
+      "appearance": {
+        "description": "As a Supreme, Hua Cheng possesses an extremely powerful shape-shifting ability not even gods can see through. In his true form, he is a handsome youth of eighteen to nineteen years with skin as white as snow and wearing maple-red clothes.",
+        "image": "Imagen15.jpeg"
       }
-    ],
-  
-  
-    "characters":[
-       {
-          "name":"Hua Cheng",
-          "chineseName":"花城",
-          "alias":"San Lang",
-          "description":"Hua Cheng, also referred to as San Lang, is the deuteragonist and main love interest in Heaven Official’s Blessing. He's a ghost of Supreme rank and the most notorious of the Four Great Calamities, widely known as Crimson Rain Sought Flower.",
-          "image":"Imagen15.jpeg",
-          "appearance":{
-             "description":"As a Supreme, Hua Cheng possesses an extremely powerful shape-shifting ability not even gods can see through. In his true form, he is a handsome youth of eighteen to nineteen years with skin as white as snow and wearing maple-red clothes.",
-             "image":"Imagen15.jpeg"
-          }
-       },
-       {
-          "name":"Xie Lian",
-          "chineseName":"谢怜",
-          "description":"Xie Lian, His Royal Highness the Crown Prince of Xianle, is the protagonist of Heaven Official’s Blessing. After multiple unfortunate events, he was twice banished from the Heavens. 800 years later, he ascended for the third time.",
-          "image":"Imagen14.jpeg",
-          "appearance":{
-             "description":"In terms of appearance, Xie Lian was considered the peerless beauty of Xianle. His body is described as 'smooth and fair like jade.' He currently wears a conical bamboo hat and is dressed in simple, white Taoist robes.",
-             "image":"Imagen14.jpeg"
-          }
-       },
-       {
-          "name":"Jun Wu",
-          "chineseName":"君吾",
-          "description":"Jun Wu is the Heavenly Emperor who presides over the Heavenly realm, as well as the oldest and most powerful Martial God. He resides in the Great Martial Hall, the number one martial palace in Heaven.",
-          "image":"https://static.myfigurecollection.net/upload/entries/1/328191-4d25b.jpg",
-          "appearance":{
-             "description":"Jun Wu is a poised, solemn youth with an air of dignity. He is usually seen clad in pure white armors, and sits on a throne with the Great Martial Hall behind him and the snowy peak of a mountain under his feet.",
-             "image":"https://static.myfigurecollection.net/upload/entries/1/328191-4d25b.jpg"
-          }
-       }
-    ]
- 
-  }
- 
+    },
+    {
+      "name": "Xie Lian",
+      "chineseName": "谢怜",
+      "description": "Xie Lian, His Royal Highness the Crown Prince of Xianle, is the protagonist of Heaven Official’s Blessing. After multiple unfortunate events, he was twice banished from the Heavens. 800 years later, he ascended for the third time.",
+      "image": "Imagen14.jpeg",
+      "appearance": {
+        "description": "In terms of appearance, Xie Lian was considered the peerless beauty of Xianle. His body is described as 'smooth and fair like jade.' He currently wears a conical bamboo hat and is dressed in simple, white Taoist robes.",
+        "image": "Imagen14.jpeg"
+      }
+    },
+    {
+      "name": "Jun Wu",
+      "chineseName": "君吾",
+      "description": "Jun Wu is the Heavenly Emperor who presides over the Heavenly realm, as well as the oldest and most powerful Martial God. He resides in the Great Martial Hall, the number one martial palace in Heaven.",
+      "image": "Personaje3.jpg",
+      "appearance": {
+        "description": "Jun Wu is a poised, solemn youth with an air of dignity. He is usually seen clad in pure white armors, and sits on a throne with the Great Martial Hall behind him and the snowy peak of a mountain under his feet.",
+        "image": "Personaje3.jpg"
+      }
+    },
+    {
+      "name": "Feng Xin",
+      "chineseName": "风신",
+      "description": "Feng Xin is a martial god and a member of the Four Great Marshals. He is known for his loyalty and his unwavering dedication to his duties.",
+      "image": "Personaje4.jpg",
+      "appearance": {
+        "description": "Feng Xin has a strong and imposing appearance, with broad shoulders and a muscular build. He often wears armor and carries a sword, reflecting his martial prowess.",
+        "image": "Personaje4.jpg"
+      }
+    },
+    {
+      "name": "Mu Qing",
+      "chineseName": "木青",
+      "description": "Mu Qing is a martial god and one of the Four Great Marshals. He is known for his fierce loyalty to Xie Lian and his hot-tempered personality.",
+      "image": "Personaje5.jpg",
+      "appearance": {
+        "description": "Mu Qing has a rugged and wild appearance, with long unkempt hair and sharp features. He often wears simple martial arts robes and carries a sword, reflecting his martial prowess.",
+        "image": "Personaje5.jpg"
+      }
+    },
+    
+    {
+      "name": "He Xuan",
+      "chineseName": "贺铄",
+      "description": "He Xuan is the Prince of the Heavenly Kingdom and the heir to the throne. He is a powerful martial god and a skilled swordsman.",
+      "image": "Personaje6.jpg",
+      "appearance": {
+        "description": "He Xuan has a regal and handsome appearance, with long black hair and piercing eyes. He often wears elaborate robes and carries a sword, reflecting his status and martial prowess.",
+        "image": "Personaje6.jpg"
+    }
+    },
+    {
+      "name": "Quan Yizhen",
+      "chineseName": "全忆真",
+      "description": "Quan Yizhen is the Queen of the Heavenly Kingdom and the wife of the Heavenly Emperor, Jun Wu. She is a powerful and respected figure in the celestial realm.",
+      "image": "Personaje7.jpg",
+      "appearance": {
+        "description": "Quan Yizhen has a regal and elegant appearance, with long flowing hair and a graceful demeanor. She often wears intricate robes befitting her status as the Queen of Heaven.",
+        "image": "Personaje7.jpg"
+      }
+    },
+    {
+      "name": "Ling Wen",
+      "chineseName": "灵温",
+      "description": "Ling Wen is a powerful martial god and one of the Four Great Marshals. He is known for his calm and composed nature, as well as his strategic mind.",
+      "image": "Personaje8.jpg",
+      "appearance": {
+        "description": "Ling Wen has a serene and scholarly appearance, with neatly tied hair and a calm expression. He often wears simple martial arts robes and carries a sword, reflecting his martial prowess.",
+        "image": "Personaje8.jpg"
+      }
+    },
+    {
+      "name": "Nan Feng",
+      "chineseName": "南风",
+      "description": "Nan Feng is a powerful martial god and one of the Four Great Marshals. He is known for his fierce loyalty and his uncompromising nature.",
+      "image": "Personaje9.jpg",
+      "appearance": {
+        "description": "Nan Feng has a stern and imposing appearance, with sharp features and a muscular build. He often wears armor and carries a sword, reflecting his martial prowess.",
+        "image": "Personaje9.jpg"
+      }
+    }
+  ]
+}

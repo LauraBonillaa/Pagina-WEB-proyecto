@@ -27,7 +27,7 @@ window.addEventListener('load', function() {
         p2.className = "character-alias";
 
         const p3 = document.createElement("p");
-        p3.textContent = characterData.appearance.descriptionAppearance;
+        p3.textContent = characterData.appearance.description;
         p3.className = "character-description";
 
         container.appendChild(imgElement);

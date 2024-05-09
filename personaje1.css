@@ -86,8 +86,9 @@ a {
   display: flex;
   justify-content: center;
   width: 100wh;
-  height: 150vh;
+  height: 100;
   flex-wrap: wrap;
+  margin: 2rem 2rem 2rem 2rem;
 }
 
 .product {
@@ -101,7 +102,7 @@ a {
 img {
   width: 400px;
   height: 700px;
-  border-radius: 10%;
+  
 }
 
 button {

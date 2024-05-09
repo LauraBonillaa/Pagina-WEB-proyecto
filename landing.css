@@ -34,7 +34,7 @@ body {
   height: 670px;
 }
 
-#text {
+.text {
   font-size: large;
   line-height: 1.5em;
   float: right;
@@ -126,6 +126,9 @@ main h2 {
   flex-direction: column;
   align-items: center;
   gap: 5%;
+  padding: 3rem;
+  justify-content: flex-start;
+  
 }
 
 .footer-container {
