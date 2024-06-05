@@ -1,32 +1,47 @@
-import { obtenerUsuarioEnSesion, logout } from './session.js';
+const USUARIOS_KEY = "usuarios";
+const USUARIOS_ACTIVO_KEY = "usuario-activo";
 
-document.addEventListener("DOMContentLoaded", () => {
+const obtenerUsuarios = () => {
+    const usuarios = localStorage.getItem(USUARIOS_KEY);
+    if (!usuarios) {
+        return [];
+    }
+    return JSON.parse(usuarios);
+};
+
+const obtenerUsuarioEnSesion = () => {
+    const usuarioActivoId = localStorage.getItem(USUARIOS_ACTIVO_KEY);
+    if (!usuarioActivoId) {
+        return null;
+    }
+
+    const usuarios = obtenerUsuarios();
+    return usuarios.find(usuario => usuario.id === parseInt(usuarioActivoId));
+};
+
+const logout = () => {
+    localStorage.removeItem(USUARIOS_ACTIVO_KEY);
+};
+
+const render = () => {
     const usuarioActivo = obtenerUsuarioEnSesion();
 
-    // Si no hay un usuario activo, redirige a la página de inicio
     if (!usuarioActivo) {
-        window.location.href = "./index.html";
+        window.location.href = "./Login.html";
         return;
     }
 
-    // Mostrar un mensaje de bienvenida
-    const usuarioActivoNombre = document.querySelector("body");
-    usuarioActivoNombre.insertAdjacentHTML('afterbegin', `<p>Bienvenido ${usuarioActivo.correo}</p>`);
+    document.getElementById("username").textContent = usuarioActivo.name;
+    document.getElementById("fullname").textContent = usuarioActivo.name; // Assuming "fullname" is the same as "nombre"
+    document.getElementById("email").textContent = usuarioActivo.correo;
+    document.getElementById("password").textContent = "********"; // Hide the actual password
+    document.getElementById("subscription").textContent = usuarioActivo.favoritos.length > 0 ? "Active" : "Inactive"; // Example subscription status
 
-    // Configurar el botón de cerrar sesión
-    const cerrarSesion = document.querySelector("#cerrarSesion");
+    const cerrarSesion = document.getElementById("cerrarSesion");
     cerrarSesion.addEventListener("click", () => {
-        alert("se clickea");
         logout();
-        window.location.href = "./login.html";
+        window.location.href = "./Login.html";
     });
+};
 
-    // Mostrar información del usuario en la página
-    document.getElementById("nombre").textContent = usuarioActivo.nombre;
-    
-    document.getElementById("correo").textContent = usuarioActivo.correo;
-    document.getElementById("contraseña").textContent = "********"; // No se muestra la contraseña real
-    
-});
-
-document.getElementById("logout").addEventListener("click", logout);
+document.addEventListener("DOMContentLoaded", render);
