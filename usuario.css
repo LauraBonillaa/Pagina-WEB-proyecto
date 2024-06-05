@@ -107,7 +107,7 @@ footer {
   .usertext{
     position: relative;
     float: left;
-    height: 320px;
+    height: 360px;
     width: 35%; 
     padding: 40px;
     justify-content: flex-start;
@@ -177,4 +177,8 @@ footer {
 }
 .imagenlogin{
   color:#fff
+}
+.info{
+  background-color: #4f0303;
+  border: none;
 }

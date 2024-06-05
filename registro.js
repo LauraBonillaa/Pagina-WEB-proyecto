@@ -1,30 +1,26 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const registroForm = document.querySelector("#registro");
+import { registrar } from "./session.js";
 
-    registroForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+const render = () => {
+  const registro = document.querySelector("#registro");
 
-        const nombre = e.target.name.value;
-        const correo = e.target.email.value;
-        const contraseña = e.target.password.value;
-        const confirmarContraseña = e.target.confirmarContraseña.value;
-        const aceptarTerminos = e.target.agree.checked;
+  registro.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-        if (contraseña !== confirmarContraseña) {
-            alert("Las contraseñas no coinciden.");
-            return;
-        }
+    const nombre = e.target.nombre.value;
+   const correo = e.target.correo.value;
+    const contraseña = e.target.contraseña.value;
+    const confirmarContraseña = e.target.confirmarContraseña.value;
 
-        if (!aceptarTerminos) {
-            alert("Debes aceptar los términos y condiciones.");
-            return;
-        }
+    try {
+      registrar(nombre, correo, contraseña, confirmarContraseña);
+      alert("Usuario registrado exitosamente");
+      //ahora nos redirigimos al login
+      window.location.href = "./login.html";
+    } catch (error) {
+      alert(error.message);
+    }
+  });
+};
 
-        // Simular registro exitoso
-        alert("Registro exitoso");
-
-        // Redirigir a la landing page
-        window.location.href = "./landing.html";
-    });
-});
+document.addEventListener("DOMContentLoaded", render);
 

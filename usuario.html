@@ -2,96 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inder&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
-    <title>User Profile</title>
-    <link rel="stylesheet" href="usuario.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inder&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inder&display=swap" rel="stylesheet">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="usuario.css">
 </head>
 
 <body>
-    <img src="https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Banner.jpg?raw=true" class="Banner">
-    <div class="header">
-        <nav>
-            <a href="usuario.html">User</a>
-            <a href="landing.html">Main</a>
-            <a href="personaje1.html">Characters</a>
-            <a href="favoritos.html">Favorites</a>
-            <a href="mainpage.html">About</a>
-            <a href="merch.html">Merch</a>
-        </nav>
-    </div>
-    <section class="cajita">
-        <section class="cajitaimagen">
-            <img src="https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/profile.jpg?raw=true" class="user-image" alt="User Image">
-        </section>
-        <section class="usertext">
-            <p>Username: <span id="username" class="text"></span></p>
-            <p>Full Name: <span id="fullname" class="text"></span></p>
-            <p>Email: <span id="email" class="text"></span></p>
-            <p><button class="change-email-btn">Change Email</button></p>
-            <p>Password: <span id="password" class="text"></span></p>
-            <p><button class="change-password-btn">Change Password</button></p>
-            <p>Subscription: <span id="subscription" class="text"></span></p>
-        </section>
-    </section>
+  <img src="https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Banner.jpg?raw=true" class="Banner">
+  <section class="header">
+    <nav>
+      <a href="usuario.html" class="header">User</a>
+      <a href="landing.html" class="header">Main</a>
+      <a href="personaje1.html" class="header">Characters</a>
+      <a href="favoritos.html" class="header">Favorites</a>
+      <a href="mainpage.html" class="header">About</a>
+      <a href="merch.html" class="header">Merch</a>
 
-    <section class="edit-image-btn">
-        <button class="botonimagen">Edit Image</button>
+    </nav>
+  </section>
+  <section class="cajita">
+    <section class="cajitaimagen">
+      <img src="https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/profile.jpg?raw=true"
+        class="user-image" alt="User Image">
     </section>
-    <section class="settings-btn">
-        <button class="botonsettings">Settings</button>
-    </section>
+    <section class="usertext">
+      <div>
+        <p>Username: <span id="username" class="text"></span></p>
+        <input class="info" id="nombre" type="text"  readonly>
+      </div>
+      <div>
+        <p>Email: <span id="email" class="text"></span></p>
+        <input class="info" id="correo" type="text" readonly>
+        <p><button class="change-email-btn">Change Email</button></p>
+      </div>
+      <div>
+        <p>Password: <span id="password" class="text"></span></p>
+        <input class="info" id="contraseña" type="text" readonly>
+        <p><button class="change-password-btn">Change Password</button></p>
+      </div>
 
-    <section class="logout-btn">
-        <a href="Login.html">
-            <button class="botonlogout">Logout</button>
-        </a>
     </section>
+  </section>
 
-    <script src="usuario.js"></script>
+  <section class="edit-image-btn">
+    <button class="botonimagen">Edit Image</button>
+  </section>
+  <section class="settings-btn">
+    <button class="botonsettings">Settings</button>
+  </section>
+
+  <section class="logout-btn">
+    <a href="Login.html">
+      <button class="botonlogout" id="logout">Logout</button>
+    </a>
+  </section>
+
+
 </body>
 
 <footer>
-    <div class="footer-container">
-        <div class="legal">
-            <ul>
-                <li class="menufooter">Legal</li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Privacy</a></li>
-                <br>
-                <br>
-                <br>
-            </ul>
-        </div>
-        <div class="menu">
-            <ul>
-                <li class="menufooter">Menu</li>
-                <li><a href="usuario.html">Usuario</a></li>
-                <li><a href="personaje1.html">Personajes</a></li>
-                <li><a href="favoritos.html">Favoritos</a></li>
-                <li><a href="mainpage.html">Main</a></li>
-                <li><a href="merch.html">Merch</a></li>
-            </ul>
-        </div>
-        <div class="contact-info">
-            <p class="menufooter">Contact</p>
-            <p>Haavenofficial@gmail.com</p>
-            <p>+57 3129873472</p>
-            <br>
-            <br>
-            <br>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Buscar">
-            <button type="submit">Buscar</button>
-        </div>
-        <p class="textfooter">© 2020 Heaven Official´s Blessing inc </p>
+  <div class="footer-container">
+    <div class="legal">
+      <ul>
+        <li class="menufooter">Legal</li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <br>
+        <br>
+        <br>
+      </ul>
     </div>
+    <div class="menu">
+      <ul>
+        <li class="menufooter">Menu</li>
+        <li><a href="usuario.html">Usuario</a></li>
+        <li><a href="personaje1.html">Personajes</a></li>
+        <li><a href="favoritos.html">Favoritos</a></li>
+        <li><a href="mainpage.html">Main</a></li>
+        <li><a href="merch.html">Merch</a></li>
+      </ul>
+    </div>
+    <div class="contact-info">
+      <p class="menufooter">Contact</p>
+      <p>Haavenofficial@gmail.com</p>
+      <p>+57 3129873472</p>
+      <br>
+      <br>
+      <br>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Buscar">
+      <button type="submit">Buscar</button>
+    </div>
+    <p class="textfooter">© 2020 Heaven Official´s Blessing inc </p>
+  </div>
 </footer>
 
-<script src="usuario.js"></script>
+<script type="module" src="./usuario.js"></script>
 
 </html>
-

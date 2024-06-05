@@ -16,9 +16,9 @@
             <div class="Form">
                 <h1>Login</h1>
                 <form id="login">
-                    <input id="email" placeholder="User" class="Campo1" style="text-align: left;">
-                    <input id="password" placeholder="Password" class="Campo2">
-                    <input type="submit" class="Login" value="login">
+                    <input id="email" placeholder="User" class="Campo1" style="text-align: left;" required>
+                    <input id="password" placeholder="Password" class="Campo2" required>
+                    <input type="submit" class="Login" value="login"/>
                 </form>
             </div>
             <div class="Socialmedia">
@@ -33,10 +33,8 @@
         </div>
     </div>
     <footer>
-        <script src="login.js"></script>
-        <script src="session.js"></script>
-        <script src="registro.js"></script>
-        <script src="usuario.js"></script>
+        <script type="module" src="./login.js"></script>
+        
     </footer>
 </body>
 

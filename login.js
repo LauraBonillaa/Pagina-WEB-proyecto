@@ -1,21 +1,26 @@
-const render = () => {
-    const loginForm = document.querySelector("#login");
+import { login } from "./session.js";
 
-    loginForm.addEventListener("submit", (e) => {
+
+const render = () => {
+    const loginForm= document.querySelector("#login");
+
+    loginForm.addEventListener("login", (e) => {
         e.preventDefault(); 
 
-        const correo = e.target.email.value;
-        const contraseña = e.target.password.value;
+        const correo = e.target.correo.value;
+        const contraseña = e.target.contraseña.value;
 
         try {
             login(correo, contraseña);
-            // Ahora nos redirigimos a la landing page
+//ahora nos redirigimos a la landing             
             window.location.href = "./landing.html";
         } catch (error) {
             alert(error.message);
         }
+
     });
 };
 
 document.addEventListener("DOMContentLoaded", render);
+
 
