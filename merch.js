@@ -70,6 +70,3 @@ export const fetchAndRenderProductos = () => {
 
 // Llamar a la función
 fetchAndRenderProductos();
-
-
-

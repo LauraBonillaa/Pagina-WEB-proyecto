@@ -1,22 +1,36 @@
-
 class Personaje {
   constructor(name, chineseName, alias, appearence) {
     this.name = name;
     this.chineseName = chineseName;
     this.alias = alias;
     this.appearence = appearence;
+    this.isStarred = false;
+  }
+
+  toggleStar(starButton) {
+    this.isStarred = !this.isStarred;
+    this.addToFavorites(starButton);
+  }
+
+  addToFavorites(starButton) {
+    console.log(`${this.name} ${this.isStarred ? 'añadido a' : 'eliminado de'} favoritos`);
+
+    // Cambiar el color del botón de la estrella cuando se añade a favoritos
+    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent";
   }
 
   render() {
     const section = document.createElement("section");
+    section.id = `personaje-${this.name}`;
+
     section.style.cursor = "pointer";
     section.addEventListener('click', () => {
-        window.location.href = `detallePersonaje.html?nombre=${encodeURIComponent(this.name)}`;
+      window.location.href = `detallePersonaje.html?nombre=${encodeURIComponent(this.name)}`;
     });
 
     const imgSection = document.createElement("section");
     const imgElement = document.createElement("img");
-    imgElement.src = this.appearence.image; 
+    imgElement.src = this.appearence.image;
     imgSection.appendChild(imgElement);
 
     const textSection = document.createElement("section");
@@ -25,20 +39,25 @@ class Personaje {
     const nameText = document.createElement("span");
     nameText.textContent = this.name;
 
-    const starImg = document.createElement("img");
-    starImg.src = "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Estrella2.png?raw=true";
-    starImg.classList.add("estrella"); // Añadiendo la clase 'estrella'
-    starImg.style.marginLeft = "10px"; // Optional: Add some space between the name and the star
-    starImg.style.verticalAlign = "middle"; // Align the star image with the text
+    const starButton = document.createElement("button");
+    starButton.classList.add("estrella");
+    starButton.style.marginLeft = "10px";
+    starButton.style.verticalAlign = "middle";
+    starButton.textContent = "★"; // Usar un símbolo de estrella como texto del botón
+    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent"; // Establecer el color inicial del botón
+    starButton.addEventListener('click', (event) => {
+      event.stopPropagation();
+      this.toggleStar(starButton);
+    });
 
     h3.appendChild(nameText);
-    h3.appendChild(starImg);
+    h3.appendChild(starButton);
 
     const p = document.createElement("p");
     p.textContent = this.chineseName;
 
     const p2 = document.createElement("p");
-    p2.textContent = this.alias; 
+    p2.textContent = this.alias;
 
     textSection.appendChild(h3);
     textSection.appendChild(p);
