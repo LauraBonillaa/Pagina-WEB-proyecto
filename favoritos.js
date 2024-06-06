@@ -1,31 +1,45 @@
+// verifica que este log
+document.addEventListener("DOMContentLoaded", () => {
+  const currentUser = sessionStorage.getItem('currentUser');
+  if (!currentUser) {
+      window.location.href = "./login.html";
+      return;
+  }
+  renderFavoriteCharacters();
+});
+
+
 class Personaje {
-  constructor(name, chineseName, alias, appearance) {
+  constructor(name, chineseName, alias, appearance, isFavorited = false) {
     this.name = name;
     this.chineseName = chineseName;
     this.alias = alias;
     this.appearance = appearance;
-    this.isStarred = true; // En la página de favoritos, todos los personajes están marcados como favoritos
+    this.isFavorited = isFavorited;
   }
 
-  toggleStar(starButton, section) {
-    this.isStarred = !this.isStarred;
-    this.updateFavorites(starButton, section);
+  toggleFavorite(starButton) {
+    this.isFavorited = !this.isFavorited;
+    this.updateLocalStorage();
+    starButton.style.backgroundColor = this.isFavorited ? "red" : "transparent";
+    renderFavoriteCharacters(); // Actualiza la lista de favoritos en favoritos.html
   }
 
-  updateFavorites(starButton, section) {
-    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+  updateLocalStorage() {
+    const currentUser = sessionStorage.getItem('currentUser');
+    if (!currentUser) return;
 
-    if (!this.isStarred) {
-      favoritos = favoritos.filter(fav => fav.name !== this.name);
-      section.remove(); // Remove the section from the DOM
+    let userFavorites = JSON.parse(localStorage.getItem(currentUser)) || [];
+    const characterIndex = userFavorites.findIndex(char => char.name === this.name);
+
+    if (characterIndex > -1) {
+      userFavorites[characterIndex].isFavorited = this.isFavorited;
+    } else {
+      userFavorites.push(this);
     }
 
-    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-
-    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent";
+    localStorage.setItem(currentUser, JSON.stringify(userFavorites));
   }
-
-  console.log (updateFavorites);
 
   render() {
     const section = document.createElement("section");
@@ -47,10 +61,10 @@ class Personaje {
     starButton.style.marginLeft = "10px";
     starButton.style.verticalAlign = "middle";
     starButton.textContent = "★";
-    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent";
+    starButton.style.backgroundColor = this.isFavorited ? "red" : "transparent";
     starButton.addEventListener('click', (event) => {
       event.stopPropagation();
-      this.toggleStar(starButton, section);
+      this.toggleFavorite(starButton);
     });
 
     h3.appendChild(nameText);
@@ -74,26 +88,26 @@ class Personaje {
 }
 
 const renderFavoriteCharacters = () => {
-  fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
-    .then(response => response.json())
-    .then(charactersJSON => {
-      const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-      const contenedorFavoritos = document.getElementById("container-favoritos");
+  const currentUser = sessionStorage.getItem('currentUser');
+  if (!currentUser) return;
 
-      contenedorFavoritos.innerHTML = '';
+  const userFavorites = JSON.parse(localStorage.getItem(currentUser)) || [];
+  const favoritos = userFavorites.filter(char => char.isFavorited);
+  const contenedorFavoritos = document.getElementById("container-favoritos");
 
-      charactersJSON.characters.forEach(character => {
-        if (favoritos.some(fav => fav.name === character.name)) {
-          const characterObj = new Personaje(character.name, character.chineseName, character.alias, character.appearance);
-          const characterElement = characterObj.render();
-          contenedorFavoritos.appendChild(characterElement);
-        }
-      });
-    })
-    .catch(error => {
-      console.error('Error al cargar el archivo JSON', error);
-    });
+  contenedorFavoritos.innerHTML = '';
+
+  favoritos.forEach(characterData => {
+    const character = new Personaje(
+      characterData.name,
+      characterData.chineseName,
+      characterData.alias,
+      characterData.appearance,
+      characterData.isFavorited
+    );
+    const characterElement = character.render();
+    contenedorFavoritos.appendChild(characterElement);
+  });
 };
 
-// Llamar a la función
-renderFavoriteCharacters();
+document.addEventListener("DOMContentLoaded", renderFavoriteCharacters);

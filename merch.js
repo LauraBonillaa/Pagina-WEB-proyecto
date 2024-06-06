@@ -1,3 +1,13 @@
+// verifica que este log
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = sessionStorage.getItem('currentUser');
+  if (!currentUser) {
+      window.location.href = "./login.html";
+      return;
+  }
+  fetchAndRenderMerch();
+});
+
 class Producto {
   constructor(id, img, nombre, precio, description) {
     this.id = id;

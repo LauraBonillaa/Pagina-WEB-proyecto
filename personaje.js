@@ -1,48 +1,48 @@
+// verifica que este log
+document.addEventListener('DOMContentLoaded', () => {
+  const currentUser = sessionStorage.getItem('currentUser');
+  if (!currentUser) {
+      window.location.href = "./login.html";
+      return;
+  }
+  fetchAndRenderCharacters();
+});
+
+
 class Personaje {
-  constructor(name, chineseName, alias, appearance) {
+  constructor(name, chineseName, alias, appearance, isFavorited = false) {
     this.name = name;
     this.chineseName = chineseName;
     this.alias = alias;
     this.appearance = appearance;
-    this.isStarred = this.checkIfStarred();
+    this.isFavorited = isFavorited;
   }
 
-  checkIfStarred() {
-    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-    return favoritos.includes(this.name);
+  toggleFavorite(starButton) {
+    this.isFavorited = !this.isFavorited;
+    this.updateLocalStorage();
+    starButton.style.backgroundColor = this.isFavorited ? "red" : "transparent";
   }
 
-  toggleStar(starButton) {
-    this.isStarred = !this.isStarred;
-    this.updateFavorites();
-    this.addToFavorites(starButton);
-  }
+  updateLocalStorage() {
+    const currentUser = sessionStorage.getItem('currentUser');
+    if (!currentUser) return;
 
-  updateFavorites() {
-    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-    if (this.isStarred) {
-      favoritos.push(this.name);
+    let userFavorites = JSON.parse(localStorage.getItem(currentUser)) || [];
+    const characterIndex = userFavorites.findIndex(char => char.name === this.name);
+
+    if (characterIndex > -1) {
+      userFavorites[characterIndex].isFavorited = this.isFavorited;
     } else {
-      favoritos = favoritos.filter(fav => fav !== this.name);
+      userFavorites.push(this);
     }
-    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-  }
 
-  addToFavorites(starButton) {
-    console.log(`${this.name} ${this.isStarred ? 'añadido a' : 'eliminado de'} favoritos`);
-
-    // Cambiar el color del botón de la estrella cuando se añade a favoritos
-    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent";
+    localStorage.setItem(currentUser, JSON.stringify(userFavorites));
   }
 
   render() {
     const section = document.createElement("section");
     section.id = `personaje-${this.name}`;
-
-    section.style.cursor = "pointer";
-    section.addEventListener('click', () => {
-      window.location.href = `detallePersonaje.html?nombre=${encodeURIComponent(this.name)}`;
-    });
 
     const imgSection = document.createElement("section");
     const imgElement = document.createElement("img");
@@ -59,11 +59,11 @@ class Personaje {
     starButton.classList.add("estrella");
     starButton.style.marginLeft = "10px";
     starButton.style.verticalAlign = "middle";
-    starButton.textContent = "★"; // Usar un símbolo de estrella como texto del botón
-    starButton.style.backgroundColor = this.isStarred ? "red" : "transparent"; // Establecer el color inicial del botón
+    starButton.textContent = "★";
+    starButton.style.backgroundColor = this.isFavorited ? "red" : "transparent";
     starButton.addEventListener('click', (event) => {
       event.stopPropagation();
-      this.toggleStar(starButton);
+      this.toggleFavorite(starButton);
     });
 
     h3.appendChild(nameText);
@@ -86,40 +86,45 @@ class Personaje {
   }
 }
 
-
-
 const fetchAndRenderCharacters = () => {
-  return fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
+  fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
     .then(response => response.json())
     .then(charactersJSON => {
+      const currentUser = sessionStorage.getItem('currentUser');
+      const storedCharacters = JSON.parse(localStorage.getItem(currentUser)) || [];
       const contenedorProductos = document.getElementById("container");
       contenedorProductos.classList.add("container");
 
-      charactersJSON.characters.forEach(character => {
-        const characterObj = new Personaje(character.name, character.chineseName, character.alias, character.appearance);
-        const characterElement = characterObj.render();
-        contenedorProductos.appendChild(characterElement);
-      });
+      const renderCharacters = (characters) => {
+        contenedorProductos.innerHTML = '';
+        characters.forEach(characterData => {
+          const storedCharacter = storedCharacters.find(char => char.name === characterData.name);
+          const character = storedCharacter ? 
+            new Personaje(storedCharacter.name, storedCharacter.chineseName, storedCharacter.alias, storedCharacter.appearance, storedCharacter.isFavorited) :
+            new Personaje(characterData.name, characterData.chineseName, characterData.alias, characterData.appearance);
+
+          const characterElement = character.render();
+          contenedorProductos.appendChild(characterElement);
+        });
+      };
+
+      renderCharacters(charactersJSON.characters);
+
+      const searchInput = document.getElementById('searchInput');
+
+      const filterCharacters = () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredCharacters = charactersJSON.characters.filter(character => 
+          character.name.toLowerCase().includes(query)
+        );
+        renderCharacters(filteredCharacters);
+      };
+
+      searchInput.addEventListener('keyup', filterCharacters);
     })
     .catch(error => {
       console.error('Error al cargar el archivo JSON', error);
     });
 };
 
-// Llamar a la función
-fetchAndRenderCharacters();
-
-
-
-const searchInput = document.getElementById("search-input");
-searchInput.addEventListener("input", () => {
-  const searchText = searchInput.value.toLowerCase();
-  const filteredCharacters = characters.filter(character =>
-    character.name.toLowerCase().includes(searchText)
-  );
-  renderCharacters(filteredCharacters);
-});
-
-
-
-
+document.addEventListener('DOMContentLoaded', fetchAndRenderCharacters);
