@@ -1,3 +1,4 @@
+
 class Personaje {
   constructor(name, chineseName, alias, appearence) {
     this.name = name;
@@ -19,8 +20,19 @@ class Personaje {
     imgSection.appendChild(imgElement);
 
     const textSection = document.createElement("section");
+
     const h3 = document.createElement("h3");
-    h3.textContent = this.name;
+    const nameText = document.createElement("span");
+    nameText.textContent = this.name;
+
+    const starImg = document.createElement("img");
+    starImg.src = "https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Estrella2.png?raw=true";
+    starImg.classList.add("estrella"); // Añadiendo la clase 'estrella'
+    starImg.style.marginLeft = "10px"; // Optional: Add some space between the name and the star
+    starImg.style.verticalAlign = "middle"; // Align the star image with the text
+
+    h3.appendChild(nameText);
+    h3.appendChild(starImg);
 
     const p = document.createElement("p");
     p.textContent = this.chineseName;
@@ -36,21 +48,26 @@ class Personaje {
     section.appendChild(textSection);
 
     return section;
-}
+  }
 }
 
-fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
-  .then(response => response.json())
-  .then(charactersJSON => {
-    const contenedorProductos = document.getElementById("container");
-    contenedorProductos.classList.add("container");
+const fetchAndRenderCharacters = () => {
+  return fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
+    .then(response => response.json())
+    .then(charactersJSON => {
+      const contenedorProductos = document.getElementById("container");
+      contenedorProductos.classList.add("container");
 
-    charactersJSON.characters.forEach(character => {
-      const characterObj = new Personaje(character.name, character.chineseName, character.alias, character.appearance);
-      const characterElement = characterObj.render();
-      contenedorProductos.appendChild(characterElement);
+      charactersJSON.characters.forEach(character => {
+        const characterObj = new Personaje(character.name, character.chineseName, character.alias, character.appearance);
+        const characterElement = characterObj.render();
+        contenedorProductos.appendChild(characterElement);
+      });
+    })
+    .catch(error => {
+      console.error('Error al cargar el archivo JSON', error);
     });
-  })
-  .catch(error => {
-    console.error('Error al cargar el archivo JSON', error);
-  });
+};
+
+// Llamar a la función
+fetchAndRenderCharacters();

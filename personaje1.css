@@ -118,4 +118,7 @@ button:hover {
   background-color: #6d0404;
   color: #D9D9D9;
 }
-  
+.estrella {
+  height: 20px;
+  width: 20px;
+}  
