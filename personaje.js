@@ -1,15 +1,31 @@
 class Personaje {
-  constructor(name, chineseName, alias, appearence) {
+  constructor(name, chineseName, alias, appearance) {
     this.name = name;
     this.chineseName = chineseName;
     this.alias = alias;
-    this.appearence = appearence;
-    this.isStarred = false;
+    this.appearance = appearance;
+    this.isStarred = this.checkIfStarred();
+  }
+
+  checkIfStarred() {
+    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    return favoritos.includes(this.name);
   }
 
   toggleStar(starButton) {
     this.isStarred = !this.isStarred;
+    this.updateFavorites();
     this.addToFavorites(starButton);
+  }
+
+  updateFavorites() {
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    if (this.isStarred) {
+      favoritos.push(this.name);
+    } else {
+      favoritos = favoritos.filter(fav => fav !== this.name);
+    }
+    localStorage.setItem('favoritos', JSON.stringify(favoritos));
   }
 
   addToFavorites(starButton) {
@@ -30,7 +46,7 @@ class Personaje {
 
     const imgSection = document.createElement("section");
     const imgElement = document.createElement("img");
-    imgElement.src = this.appearence.image;
+    imgElement.src = this.appearance.image;
     imgSection.appendChild(imgElement);
 
     const textSection = document.createElement("section");
