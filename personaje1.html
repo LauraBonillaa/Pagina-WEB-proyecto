@@ -10,6 +10,7 @@
     <title>Productos</title>
 </head>
 <body>
+  
     <img src="https://github.com/LauraBonillaa/Pagina-WEB-proyecto/blob/main/Imagenes/Banner.jpg?raw=true" class="Banner">
     <section class="header">
         <nav>
@@ -22,7 +23,12 @@
     
         </nav>
     </section>
+    <section class="search-bar">
+      <input id="barrabusqueda" type="text" placeholder="Buscar" onkeyup="filtrarPersonajes()">
+      <button onclick="limpiarFiltro()">Limpiar</button>
+    </section>
     <section  class= "container" id="container" >
+
        
       <script src="personaje.js"></script>
     </section>

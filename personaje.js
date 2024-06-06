@@ -86,6 +86,8 @@ class Personaje {
   }
 }
 
+
+
 const fetchAndRenderCharacters = () => {
   return fetch('https://raw.githubusercontent.com/LauraBonillaa/Pagina-WEB-proyecto/main/data.json')
     .then(response => response.json())
@@ -106,3 +108,18 @@ const fetchAndRenderCharacters = () => {
 
 // Llamar a la función
 fetchAndRenderCharacters();
+
+
+
+const searchInput = document.getElementById("search-input");
+searchInput.addEventListener("input", () => {
+  const searchText = searchInput.value.toLowerCase();
+  const filteredCharacters = characters.filter(character =>
+    character.name.toLowerCase().includes(searchText)
+  );
+  renderCharacters(filteredCharacters);
+});
+
+
+
+
