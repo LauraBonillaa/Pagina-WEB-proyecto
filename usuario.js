@@ -33,7 +33,7 @@ const render = () => {
     }
 
     document.getElementById("username").textContent = usuarioActivo.name;
-    document.getElementById("fullname").textContent = usuarioActivo.name; // Assuming "fullname" is the same as "nombre"
+   
     document.getElementById("email").textContent = usuarioActivo.correo;
     document.getElementById("password").textContent = usuarioActivo.contraseña; // Hide the actual password
     document.getElementById("subscription").textContent = usuarioActivo.favoritos.length > 0 ? "Active" : "Inactive"; // Example subscription status
